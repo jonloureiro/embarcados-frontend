@@ -6,7 +6,7 @@ function App() {
   const [hasUser, setHasUser] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const init = async () => {
+  async function init() {
     try {
       const response = await api.get('/users/me');
       setHasUser(response.status === 200);
@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     init()
-  })
+  }, [])
 
   if (loading) return <Loading />
   else if (hasUser) return <Dashboard setHasUser={setHasUser} />
