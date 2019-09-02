@@ -1,0 +1,13 @@
+* {
+  color: #444;
+}
+
+body {
+  background-color: #FAF9F8;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: 48px 1fr;
+  justify-content: center;
+}
